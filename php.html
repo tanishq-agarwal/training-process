@@ -1,0 +1,76 @@
+<?php
+
+$username_warning = $email_warning = $username = $favcolor = $email = "";
+if($_SERVER["REQUEST_METHOD"]== "POST"){
+	if(empty($_POST['username'])){
+		$username_warning = "Please enter a value";
+	} else {
+		if(!preg_match("/^[a-zA-Z]*$/", $_POST['username'])){
+			$username_warning = "Only letters and whitespace allowed ,no numbers or special characters.";
+		} else {
+			$username = test_input($_POST['username'],40);
+		}
+	}
+	if(empty($_POST['fav_color'])){
+		$favcolor = $_POST['fav_color'];
+	}
+	if(empty($_POST['email'])){
+		$email_warning = "Please enter a value";
+	} else {
+		if(!filter_var($_POST['email'],FILTER_VALIDATE EMAIL)){
+			$email_warning = "Please enter real email address";
+		} else {
+			$email=text_input($_POST['email'],40);
+		}
+	}
+}
+function text_input($data,$maxlen){
+	$data = trim($data);//agr koi bhi spache hoyegi name ke phele ya bd me to remove kr dega
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	$len = strlen($data);
+	if($len > $maxlen){
+		$data = "";
+	}
+	return $data;
+}
+	
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+   margin: 0;
+   background-color: #131f28;
+   color: white;
+   font-size: 20px;
+}
+h1{
+	color: white;
+}
+div {
+	display: block;
+	margin: 5px;
+	color: red;
+}
+input {
+	padding: 10px;
+}
+</style>
+</head>
+<body>
+<h1>My Blog</h1>
+<form action='' method='post'>
+	<div><input type='text' name='username' value='<?php echo $username; ?>'/>*<?php echo $username_warning; ?></div>
+	<div><input type='text' name='email' value='<?php echo $email; ?>'/>*<?php echo $email_warning; ?></div>
+	<input type='radio' name='fav_color' value='orange'<?php if(!empty($favcolor) && $favcolor=="orange") echo "checked"; ?>/>Orange
+	<input type='radio' name='fav_color' value='red'<?php if(!empty($favcolor) && $favcolor=="red") echo "checked"; ?>/>Red
+	<input type='radio' name='fav_color' value='blue'<?php if(!empty($favcolor) && $favcolor=="blue") echo "checked"; ?>/>Blue
+	<div><input type='submit'/></div>
+</form>
+
+
+</body>
+</html>
