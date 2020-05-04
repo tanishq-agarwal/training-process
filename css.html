@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+   margin: 0;
+   background-color: #131f28;
+}
+ul {
+    list-style-type: none;
+    height: 50px;
+	background-color: #747f87;
+	line-height: 50px;
+	padding: 0;
+	margin: 0;
+    position: fixed;
+	width: 100%;
+	top: 82px;
+
+}
+ul li {
+    float: left;
+}
+ul li a {
+    display: block;
+	width: 100px;
+	height: 50px;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+  
+}
+ul li a:hover {
+	background-color: #555e66;
+}
+
+h1 {
+  color: white;
+}
+ul li ul  {
+	display: block;
+	top: 132px;
+	width: 100px;
+}
+ul li ul li {
+	background-color: #555e66;
+}
+ul li ul li a:hover {
+	background-color: #747f87;
+}
+ul li:hover ul {
+	display: block;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	top: 132px;
+	position: relative;
+	z-index: -10;
+}
+.column {
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 4px;
+	box-sizing: border-box;
+}
+.column > img {
+	width: 100%;
+	margin-top: 8px;
+}
+@media screen and (max-width: 400px) {<!--for visiblity in mobile-->
+	.column {
+		flex: 50%;
+		max-width: 100%;
+	}
+}
+</style>
+
+<meta charset='UTF-8'>
+</head>
+<body>
+<h1>My Blog</h1>
+
+<ul>
+    <li>
+		<a href='#home'>Home</a></li>
+		<ul>
+			<li><a href='#home1'>Home1</a></li>
+			<li><a href='#home2'>Home2</a></li>
+			<li><a href='#home3'>Home3</a></li>
+		</ul>
+	</li>
+	<li><a href='#posts'>Posts</a></li>
+	<li><a href='#news'>News</a></li>
+	<li><a href='#about'>About</a></li>
+	<li><a href='#contact'>Contact</a></li>
+</ul>
+<div class='row'>
+	<div class='column'>
+	<img src='https://image.shutterstock.com/image-photo/retro-vintage-red-bike-on-260nw-336553691.jpg'/>
+	<img src='https://lh3.googleusercontent.com/proxy/ldLZg7quWpehnoBed6lkmZL5Z62vSiqoc4NDtAtVmmEvtoqWDY6I4Iju4njUkRcEmC-E5IAdUM3odD23bzJwX0_RsxpnkmqVkCFfzsiyNiTjdTE81YvEsihC5OZW'/>
+	<img src='https://www.adorama.com/alc/wp-content/uploads/2017/11/shutterstock_123017716-1-1024x567.jpg'/>
+	<img src='https://images.iphonephotographyschool.com/10819/1120/iPhone-Photos-Black-And-White-12.jpg'/>
+	<img src='https://image.shutterstock.com/image-photo/new-york-city-black-white-260nw-156936455.jpg'/>
+	</div>
+	<div class='column'>
+	<img src='https://images.iphonephotographyschool.com/10819/1120/iPhone-Photos-Black-And-White-12.jpg'/>
+	<img src='https://image.shutterstock.com/image-photo/new-york-city-black-white-260nw-156936455.jpg'/>
+	<img src='https://image.shutterstock.com/image-photo/retro-vintage-red-bike-on-260nw-336553691.jpg'/>
+	<img src='https://image.shutterstock.com/image-photo/retro-vintage-red-bike-on-260nw-336553691.jpg'/>
+	<img src='https://lh3.googleusercontent.com/proxy/ldLZg7quWpehnoBed6lkmZL5Z62vSiqoc4NDtAtVmmEvtoqWDY6I4Iju4njUkRcEmC-E5IAdUM3odD23bzJwX0_RsxpnkmqVkCFfzsiyNiTjdTE81YvEsihC5OZW'/>
+	</div>
+	<div class='column'>
+    <img src='https://lh3.googleusercontent.com/proxy/ldLZg7quWpehnoBed6lkmZL5Z62vSiqoc4NDtAtVmmEvtoqWDY6I4Iju4njUkRcEmC-E5IAdUM3odD23bzJwX0_RsxpnkmqVkCFfzsiyNiTjdTE81YvEsihC5OZW'/>
+	<img src='https://images.iphonephotographyschool.com/10819/1120/iPhone-Photos-Black-And-White-12.jpg'/>
+	<img src='https://image.shutterstock.com/image-photo/new-york-city-black-white-260nw-156936455.jpg'/>
+	<img src='https://image.shutterstock.com/image-photo/retro-vintage-red-bike-on-260nw-336553691.jpg'/>
+	<img src='https://image.shutterstock.com/image-photo/retro-vintage-red-bike-on-260nw-336553691.jpg'/>
+	</div>
+	<div class='column'>
+	<img src='https://image.shutterstock.com/image-photo/retro-vintage-red-bike-on-260nw-336553691.jpg'/>
+	<img src='https://lh3.googleusercontent.com/proxy/ldLZg7quWpehnoBed6lkmZL5Z62vSiqoc4NDtAtVmmEvtoqWDY6I4Iju4njUkRcEmC-E5IAdUM3odD23bzJwX0_RsxpnkmqVkCFfzsiyNiTjdTE81YvEsihC5OZW'/>
+	<img src='https://images.iphonephotographyschool.com/10819/1120/iPhone-Photos-Black-And-White-12.jpg'/>
+	<img src='https://image.shutterstock.com/image-photo/new-york-city-black-white-260nw-156936455.jpg'/>'
+	<img src='https://image.shutterstock.com/image-photo/retro-vintage-red-bike-on-260nw-336553691.jpg'/>
+</div>
+
+</body>
+</html>
